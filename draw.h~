@@ -1,0 +1,86 @@
+#ifndef DRAW_H_
+	#define DRAW_H_
+
+#include "defines.h"
+#include "point.h"
+
+#include <vector>
+#include <list>
+#include <time.h>
+#include <stdlib.h>
+#include <iostream>
+#include <cmath>
+#include <stdio.h>
+#include <deque>
+
+using namespace std;
+
+typedef int Matriz [TAMX][TAMY];
+
+namespace Draw
+{
+	int Rngi(int max, int min=0);
+
+	bool Prob(double p);
+
+	list <Point<int> > GetTilePosition(Matriz m, int t);
+
+	int Get(Matriz m,Point<int> p);
+
+	vector < Point <int> > GetArea(Matriz m ,Point<int> p);
+
+	int Get(Matriz m ,int x, int y);
+
+	// int get(Matriz m ,Point<int> p);
+
+	void Insert(Matriz m ,int x, int y, int t);
+
+	void Insert(Matriz m ,Point<int> p);
+
+	void Insert(Matriz m ,Point<int> p,int tipo);
+
+	bool CheckArea(Matriz m, Point<int>xy, Point<int>wh, int t);
+
+	bool CheckArea(Matriz m, Point<int>xy, Point<int>wh, vector<int > tipos);
+
+	void Ponto(Matriz m,Point<int> pt );
+
+	void Ponto(Matriz m,int tipo,int x, int y);
+
+	void SimpSqrFill(Matriz m, Point<int> xy, Point<int> wh);
+
+	void SqrFill(Matriz m,Point<int> p1,Point<int> p2,Point<int> p3,
+					Point<int> limInf = *new Point<int>(),
+					Point<int> limSup= *new Point<int>(TAMX,TAMY,TAMZ));
+
+	void Linha(Matriz m,Point<int> ini,Point<int> fim);
+
+	void Linha(Matriz m,int tipo,int ix, int fx, int iy,int fy);
+
+	void RectangleWire(Matriz m,Point<int> a,Point<int> b,Point<int> c,Point<int> d);
+
+	void SimpRectangleWire(Matriz m,Point<int> a,Point<int> c);
+
+	void SRetangulo(Matriz m,int tipo,int ix, int fx, int iy,int fy);
+
+	void Poligono(Matriz m,Point<int> centro,int arestas, int raio,int angulo);
+
+	void CuboideWire(Matriz m,vector <Point <int> >);
+
+	void SimpCuboideWire(Matriz m,Point<int>a,Point<int>g);
+
+	void SimpCuboideShell(Matriz m,Point<int>a,Point<int>g);
+
+	void Fill_4(Matriz m,int fill_paint, int filled,int x, int y,vector<Point<int> >*coord);
+
+	list <Point<int> > getTilePosition(Matriz m, int t);
+
+	void InitMapa(Matriz m, bool type);
+    int AchaArea(Matriz m_orig,int opcao);
+	void RemoveBordasExiladas(Matriz m, vector<Point<int> >posicoes_bordas);
+	void AdicionaItensESpawn(Matriz m,float porcentagem);
+	void Circulo(Matriz m,Point<int> centro, int raio, Point<int> lim_inf, Point<int> lim_sup);
+    void MoveMap(Matriz m);
+}
+
+#endif /*DRAW_H_*/

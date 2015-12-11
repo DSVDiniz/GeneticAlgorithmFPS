@@ -1,0 +1,326 @@
+# depslib dependency file v1.0
+1430139414 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/main.cpp
+	"mapa.h"
+	<sstream>
+	<iostream>
+	<string>
+	<fstream>
+	<deque>
+	<cstring>
+	<stdlib.h>
+	<vector>
+	"defines.h"
+	"Grid.h"
+	"AllWhite.h"
+	<sstream>
+	<string>
+	<string.h>
+	<fstream>
+	"defines.h"
+
+1430082831 "
+
+1429728109 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/mapa.cpp
+	"mapa.h"
+	<exception>
+
+1429904765 >
+
+1429727311 /home/davi/Documentos/TG2/GeradorMapaGenetico/mapa.h
+	"point.h"
+	"defines.h"
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<vector>
+	<algorithm>
+
+1429723395 /home/davi/Documentos/TG2/GeradorMapaGenetico/point.h
+
+1430134071 /home/davi/Documentos/TG2/GeradorMapaGenetico/defines.h
+
+1429723873 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/InputOutput.cpp
+	"InputOutput.h"
+
+1430266082 ut.h"
+
+1429723982 /home/davi/Documentos/TG2/GeradorMapaGenetico/InputOutput.h
+
+1430282462 source:d:\dropbox\tg\geradormapagenetico\main.cpp
+	"defines.h"
+	"Grid.h"
+	"AllWhite.h"
+	"InputOutput.h"
+	"Genetica.h"
+
+1430282427 h"
+
+1429984570 d:\dropbox\tg\geradormapagenetico\mapa.h
+	"point.h"
+	"defines.h"
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<vector>
+	<algorithm>
+
+1430254841 d:\dropbox\tg\geradormapagenetico\point.h
+
+1430278842 d:\dropbox\tg\geradormapagenetico\defines.h
+
+1429904765 source:d:\dropbox\tg\geradormapagenetico\mapa.cpp
+	"mapa.h"
+	<exception>
+
+1430266089 source:d:\dropbox\tg\geradormapagenetico\grid.cpp
+	"Grid.h"
+
+1430282506 
+
+1430266106 d:\dropbox\tg\geradormapagenetico\grid.h
+	"point.h"
+	"defines.h"
+	"draw.h"
+
+1430268848 source:d:\dropbox\tg\geradormapagenetico\draw.cpp
+	"draw.h"
+
+1430266270 d:\dropbox\tg\geradormapagenetico\draw.h
+	"defines.h"
+	"point.h"
+	<vector>
+	<list>
+	<time.h>
+	<stdlib.h>
+	<iostream>
+	<cmath>
+	<stdio.h>
+	<deque>
+
+1430262019 source:d:\dropbox\tg\geradormapagenetico\allwhite.cpp
+	"AllWhite.h"
+
+1430266124 d:\dropbox\tg\geradormapagenetico\allwhite.h
+	"point.h"
+	"defines.h"
+	"draw.h"
+
+1430133870 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/AllWhite.cpp
+	"AllWhite.h"
+
+1430133878 /home/davi/Documentos/TG2/GeradorMapaGenetico/AllWhite.h
+	"point.h"
+	"defines.h"
+	"draw.h"
+
+1430133724 /home/davi/Documentos/TG2/GeradorMapaGenetico/draw.h
+	"defines.h"
+	"point.h"
+	<vector>
+	<list>
+	<time.h>
+	<stdlib.h>
+	<iostream>
+	<cmath>
+	<stdio.h>
+	<deque>
+
+1430134367 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/draw.cpp
+	"draw.h"
+
+1430133878 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/Grid.cpp
+	"Grid.h"
+
+1430133860 /home/davi/Documentos/TG2/GeradorMapaGenetico/Grid.h
+	"point.h"
+	"defines.h"
+	"draw.h"
+
+1430266082 source:d:\dropbox\tg\geradormapagenetico\inputoutput.cpp
+	"InputOutput.h"
+
+1430266929 d:\dropbox\tg\geradormapagenetico\inputoutput.h
+	"defines.h"
+	"draw.h"
+	<sstream>
+	<string>
+	<string.h>
+	<fstream>
+	<vector>
+
+1430282427 source:d:\dropbox\tg\geradormapagenetico\genetica.cpp
+	"Genetica.h"
+
+1430282506 d:\dropbox\tg\geradormapagenetico\genetica.h
+	"defines.h"
+	"draw.h"
+	<vector>
+
+1430418812 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/AllWhite.cpp
+	"AllWhite.h"
+
+1430418821 /home/davi/Documentos/TG2/GeradorMapaGenetico/AllWhite.h
+	"point.h"
+	"defines.h"
+	"draw.h"
+
+1440014917 /home/davi/Documentos/TG2/GeradorMapaGenetico/point.h
+
+1440014941 /home/davi/Documentos/TG2/GeradorMapaGenetico/defines.h
+
+1440613588 /home/davi/Documentos/TG2/GeradorMapaGenetico/draw.h
+	"defines.h"
+	"point.h"
+	<vector>
+	<time.h>
+	<stdlib.h>
+	<iostream>
+	<cmath>
+	<stdio.h>
+
+1440008635 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/draw.cpp
+	"draw.h"
+
+1430417640 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/Grid.cpp
+	"Grid.h"
+
+1430417850 /home/davi/Documentos/TG2/GeradorMapaGenetico/Grid.h
+	"point.h"
+	"defines.h"
+	"draw.h"
+
+1441310078 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/main.cpp
+	"Geradores.h"
+
+1440014304 /home/davi/Documentos/TG2/GeradorMapaGenetico/InputOutput.h
+	"defines.h"
+	"draw.h"
+	<string.h>
+	<fstream>
+
+1440014117 /home/davi/Documentos/TG2/GeradorMapaGenetico/Genetica.h
+	"defines.h"
+	"draw.h"
+	<sstream>
+	<bitset>
+
+1440014894 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/InputOutput.cpp
+	"InputOutput.h"
+
+1440013454 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/Genetica.cpp
+	"Genetica.h"
+
+1440436743 source:/home/davi/Documentos/TG2/GeradorMapaGenetico/Geradores.cpp
+	"Geradores.h"
+
+1441309118 /home/davi/Documentos/TG2/GeradorMapaGenetico/Geradores.h
+	"point.h"
+	"defines.h"
+	"InputOutput.h"
+	"Genetica.h"
+	"draw.h"
+
+1440008635 source:/home/davi/Dropbox/TG/GeradorMapaGenetico/draw.cpp
+	"draw.h"
+
+1440613588 /home/davi/Dropbox/TG/GeradorMapaGenetico/draw.h
+	"defines.h"
+	"point.h"
+	<vector>
+	<time.h>
+	<stdlib.h>
+	<iostream>
+	<cmath>
+	<stdio.h>
+
+1440014941 /home/davi/Dropbox/TG/GeradorMapaGenetico/defines.h
+
+1440014917 /home/davi/Dropbox/TG/GeradorMapaGenetico/point.h
+
+1441309059 source:/home/davi/Dropbox/TG/GeradorMapaGenetico/Geradores.cpp
+	"Geradores.h"
+
+1441309118 /home/davi/Dropbox/TG/GeradorMapaGenetico/Geradores.h
+	"point.h"
+	"defines.h"
+	"InputOutput.h"
+	"Genetica.h"
+	"draw.h"
+
+1440014894 source:/home/davi/Dropbox/TG/GeradorMapaGenetico/InputOutput.cpp
+	"InputOutput.h"
+
+1440014304 /home/davi/Dropbox/TG/GeradorMapaGenetico/InputOutput.h
+	"defines.h"
+	"draw.h"
+	<string.h>
+	<fstream>
+
+1441309992 source:/home/davi/Dropbox/TG/GeradorMapaGenetico/main.cpp
+	"Geradores.h"
+
+1440014117 /home/davi/Dropbox/TG/GeradorMapaGenetico/Genetica.h
+	"defines.h"
+	"draw.h"
+	<sstream>
+	<bitset>
+
+1432305436 source:/home/kn/Dropbox/TG/GeradorMapaGenetico/draw.cpp
+	"draw.h"
+
+1432768815 /home/kn/Dropbox/TG/GeradorMapaGenetico/draw.h
+	"defines.h"
+	"point.h"
+	<vector>
+	<list>
+	<time.h>
+	<stdlib.h>
+	<iostream>
+	<cmath>
+	<stdio.h>
+	<deque>
+
+1432662893 /home/kn/Dropbox/TG/GeradorMapaGenetico/defines.h
+
+1430254841 /home/kn/Dropbox/TG/GeradorMapaGenetico/point.h
+
+1432695436 source:/home/kn/Dropbox/TG/GeradorMapaGenetico/Genetica.cpp
+	"Genetica.h"
+
+1432302903 /home/kn/Dropbox/TG/GeradorMapaGenetico/Genetica.h
+	"defines.h"
+	"draw.h"
+	<vector>
+	<sstream>
+	<bitset>
+
+1432840928 source:/home/kn/Dropbox/TG/GeradorMapaGenetico/Geradores.cpp
+	"Geradores.h"
+
+1432840968 /home/kn/Dropbox/TG/GeradorMapaGenetico/Geradores.h
+	"point.h"
+	"defines.h"
+	"InputOutput.h"
+	"Genetica.h"
+	"draw.h"
+
+1432769422 source:/home/kn/Dropbox/TG/GeradorMapaGenetico/InputOutput.cpp
+	"InputOutput.h"
+
+1432331158 /home/kn/Dropbox/TG/GeradorMapaGenetico/InputOutput.h
+	"defines.h"
+	"draw.h"
+	<sstream>
+	<string>
+	<string.h>
+	<fstream>
+	<vector>
+
+1432768981 source:/home/kn/Dropbox/TG/GeradorMapaGenetico/main.cpp
+	"Geradores.h"
+
+1440013454 source:/home/davi/Dropbox/TG/GeradorMapaGenetico/Genetica.cpp
+	"Genetica.h"
+

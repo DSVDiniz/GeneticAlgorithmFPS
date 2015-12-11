@@ -1,0 +1,151 @@
+#include "defines.h"
+#include "Geradores.h"
+#include "InputOutput.h"
+#include "Genetica.h"
+
+Matriz mapa_grid,mapa_allwhite;
+
+vector<vector<int> > InicializaPopGrid(int num_pop)
+{
+	vector<vector<int> > g_pop;
+	g_pop.resize(num_pop);
+    for(int i=0;i<num_pop;++i)
+        for(int j=0;j<81;++j)
+            g_pop[i].push_back(Draw::Rngi(3,0));
+
+    return g_pop;
+}
+
+vector<vector<int> > InicializaPopAllWhite(int num_pop)
+{
+	vector<vector<int> > aw_pop;
+	aw_pop.resize(num_pop);
+    for(int i=0;i<num_pop;++i)
+        for(int j=0;j<NW*3;j+=3)
+		{
+            aw_pop[i].push_back(Draw::Rngi(64,0));
+            aw_pop[i].push_back(Draw::Rngi(64,0));
+            aw_pop[i].push_back(Draw::Rngi(128,0)-64);
+        }
+
+	return aw_pop;
+}
+
+void FirstGrid(int num_pop, int opcao)
+{
+	cout<<"Gerando populacao de "<<num_pop<<" individuos GRID."<<endl;
+
+	vector<vector<int> > g_pop = InicializaPopGrid(num_pop);
+
+	for(int i=0; i<num_pop;++i)
+	{
+		stringstream nome_mapa;
+		Geradores::GenerateMap(mapa_grid,g_pop[i],opcao,G_GRID);
+		nome_mapa<<"mapa"<<i<<".txt";
+		io::WriteMap(mapa_grid,nome_mapa.str());
+	}
+	io::WriteGenoma(g_pop,"genoma.txt");
+}
+
+void FirstAllWhite(int num_pop, int opcao)
+{
+	cout<<"Gerando populacao de "<<num_pop<<" individuos ALLWHITE."<<endl;
+	vector<vector<int> > aw_pop=InicializaPopAllWhite(num_pop);
+
+	for(int i=0; i<num_pop;++i)
+	{
+		stringstream nome_mapa;
+		Geradores::GenerateMap(mapa_allwhite,aw_pop[i],opcao,G_ALLWHITE);
+		nome_mapa<<"mapa"<<i<<".txt";
+		io::WriteMap(mapa_allwhite,nome_mapa.str());
+	}
+	io::WriteGenoma(aw_pop,"genoma.txt");
+}
+
+void NextGrid(vector<vector<int> > genoma, vector<int> fitness, int opcao)
+{
+	vector<vector<int> > nova_geracao;
+	nova_geracao = gen::Selection(genoma,fitness,G_GRID);
+
+	for(unsigned int i=0; i<nova_geracao.size();++i)
+	{
+		stringstream nome_mapa;
+		Geradores::GenerateMap(mapa_grid,nova_geracao[i],opcao,G_GRID);
+		nome_mapa<<"mapa"<<i<<".txt";
+		io::WriteMap(mapa_grid,nome_mapa.str());
+	}
+	io::WriteGenoma(nova_geracao,"genoma.txt");
+}
+
+void NextAllWhite(vector<vector<int> > genoma, vector<int> fitness,int opcao)
+{
+	vector<vector<int> > nova_geracao;
+
+	nova_geracao = gen::Selection(genoma,fitness,G_ALLWHITE);
+
+	for(unsigned int i=0; i<nova_geracao.size();++i)
+	{
+		stringstream nome_mapa;
+		Geradores::GenerateMap(mapa_allwhite,nova_geracao[i],opcao,G_ALLWHITE);
+		nome_mapa<<"mapa"<<i<<".txt";
+		io::WriteMap(mapa_allwhite,nome_mapa.str());
+	}
+	io::WriteGenoma(nova_geracao,"genoma.txt");
+}
+
+int main(int argc, char **argv)
+{
+    int num_pop;
+    srand(time(NULL));
+    int opcao = CENTRAL;
+
+    if(argc==3)//gerando mapas pela primeira vez
+    {
+        num_pop = atoi(argv[2]);
+        if(strcmp(argv[1],"-grid")==0)//-grid 5
+        {
+			FirstGrid(num_pop, opcao);
+        }
+        else if(strcmp(argv[1],"-allwhite")==0)//-allwhite 5
+        {
+            FirstAllWhite(num_pop,opcao);
+        }
+        else if(true)
+        {
+
+        }
+    }
+    else if(argc==4)//lendo fitness para preparar nova geracao
+    {
+    	vector<int>fitness = io::ReadFitness(argv[2]);
+		vector<vector<int> >genoma = io::ReadGenoma(argv[3]);
+		cout<<"F.size:"<<fitness.size()<<" G.size:"<<genoma.size()<<endl;
+
+		for(int i=0;i<25;i++)
+            cout<<fitness[i]<<endl;
+
+		if((fitness.size()!=0)&&(fitness.size()==genoma.size()))
+		{
+			cout<<fitness.size()<<" individuos encontrados."<<endl;
+
+			if(strcmp(argv[1],"-grid")==0)//-grid teste.txt genoma.txt
+			{
+				NextGrid(genoma,fitness,opcao);
+			}
+			else if(strcmp(argv[1],"-allwhite")==0)//-allwhite teste.txt genoma.txt
+			{
+				NextAllWhite(genoma,fitness,opcao);
+			}
+			else if(true)
+			{
+
+			}
+		}
+		else
+			cout<<"Numero de fitness nao eh igual ao de genomas."<<endl;
+    }
+    else
+        cout<<"Parametros errados. ./nomeprograma <-allwhite, -grid> <tam_populacao> <nome_arquivo.txt>"<<endl;
+
+    return 0;
+}
